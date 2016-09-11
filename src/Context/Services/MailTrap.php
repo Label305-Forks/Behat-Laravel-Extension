@@ -118,7 +118,7 @@ trait MailTrap
                 // Guzzle 5.* uses base_url
                 'base_url' => 'https://mailtrap.io',
                 // Guzzle 6.* uses base_uri
-                'base_uri' => 'https://mailtrap.ip',
+                'base_uri' => 'https://mailtrap.io',
                 'defaults' => [
                     'headers' => ['Api-Token' => $this->mailTrapApiKey]
                 ]
