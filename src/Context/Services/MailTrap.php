@@ -115,13 +115,14 @@ trait MailTrap
     {
         if ( ! $this->client) {
             $this->client = new Client([
-                // Guzzle 5.* uses base_url
+                // Guzzle 5.* uses base_url and defaults
                 'base_url' => 'https://mailtrap.io',
-                // Guzzle 6.* uses base_uri
-                'base_uri' => 'https://mailtrap.io',
                 'defaults' => [
                     'headers' => ['Api-Token' => $this->mailTrapApiKey]
                 ]
+                // Guzzle 6.* uses base_uri and headers directly
+                'base_uri' => 'https://mailtrap.io',
+                'headers' => ['Api-Token' => $this->mailTrapApiKey]
             ]);
         }
 
